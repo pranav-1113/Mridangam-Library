@@ -42,7 +42,7 @@ elif page == "Notes":
 		pdfpath=notes_dir/selected_notes
 
 		with open(pdfpath, "rb") as f:
-    		pdf_bytes = f.read()
+			pdf_bytes = f.read()
 
 		base64_pdf = base64.b64encode(pdf_bytes).decode("utf-8")
 
