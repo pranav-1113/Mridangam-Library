@@ -2,6 +2,7 @@ import streamlit as st
 from pathlib import Path 
 from supabase_config import supabase
 import uuid
+import base64
 
 st.set_page_config(
 	page_title="Mridangam Library",
@@ -40,10 +41,22 @@ elif page == "Notes":
 		selected_notes=st.selectbox("Choose a PDF",[pdf.name for pdf in pdfs])
 		pdfpath=notes_dir/selected_notes
 
-		with open(pdfpath,"rb") as f:
-			pdf1=f.read()
-			st.pdf(pdf1)
-			st.download_button(
+		with open(pdfpath, "rb") as f:
+    		pdf_bytes = f.read()
+
+		base64_pdf = base64.b64encode(pdf_bytes).decode("utf-8")
+
+		pdf_display = f"""
+		<iframe
+		    src="data:application/pdf;base64,{base64_pdf}"
+		    width="100%"
+		    height="800"
+		    type="application/pdf">
+		</iframe>
+		"""
+
+		st.markdown(pdf_display, unsafe_allow_html=True)
+		st.download_button(
 				label=f"Download {pdfpath.name}",
 				data=pdf1,
 				file_name=pdfpath.name)
