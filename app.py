@@ -41,21 +41,13 @@ elif page == "Notes":
 		selected_notes=st.selectbox("Choose a PDF",[pdf.name for pdf in pdfs])
 		pdfpath=notes_dir/selected_notes
 
-		with open(pdfpath, "rb") as f:
-			pdf_bytes = f.read()
-
-		base64_pdf = base64.b64encode(pdf_bytes).decode("utf-8")
-
-		pdf_display = f"""
-		<iframe
-		    src="data:application/pdf;base64,{base64_pdf}"
-		    width="100%"
-		    height="800"
-		    type="application/pdf">
-		</iframe>
-		"""
-
-		st.markdown(pdf_display, unsafe_allow_html=True)
+		with open(pdfpath,"rb") as f:
+			pdf1=f.read()
+			st.link_button(
+    		"Open PDF",
+    		file_url
+			)
+			
 		st.download_button(
 				label=f"Download {pdfpath.name}",
 				data=pdf1,
