@@ -2,7 +2,7 @@ import streamlit as st
 from pathlib import Path 
 from supabase_config import supabase
 import uuid
-from streamlit_pdf_viewer import pdf_viewer
+from streamlit-pdf-viewer import pdf-viewer
 
 st.set_page_config(
 	page_title="Mridangam Library",
