@@ -42,7 +42,7 @@ elif page == "Notes":
 		pdfpath=notes_dir/selected_notes
 		
 		github_url=("https://github.com/pranav-1113/Mridangam-Library/tree/main/data/notes/"f"{selected_notes}")
-		st.link_button("View PDF"github_url)
+		st.link_button("View PDF",github_url)
 		with open(pdfpath,"rb") as f:
 			pdf1=f.read()
 			
