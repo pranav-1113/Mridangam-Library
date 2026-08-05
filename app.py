@@ -41,11 +41,14 @@ elif page == "Notes":
 		selected_notes=st.selectbox("Choose a PDF",[pdf.name for pdf in pdfs])
 		pdfpath=notes_dir/selected_notes
 		
-		github_url=("https://github.com/pranav-1113/Mridangam-Library/tree/main/data/notes/"f"{selected_notes}")
-		st.link_button("View PDF",github_url)
+		
 		with open(pdfpath,"rb") as f:
 			pdf1=f.read()
-			
+
+		base64_pdf = base64.b64encode(pdf_bytes).decode("utf-8") 
+		pdf_display = f""" <iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="700px" style="border:none;"> </iframe> """ 
+		st.markdown(pdf_display, unsafe_allow_html=True)
+		
 		st.download_button(
 				label=f"Download {pdfpath.name}",
 				data=pdf1,
