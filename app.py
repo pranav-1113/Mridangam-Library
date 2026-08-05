@@ -41,12 +41,13 @@ elif page == "Notes":
 		selected_notes=st.selectbox("Choose a PDF",[pdf.name for pdf in pdfs])
 		pdfpath=notes_dir/selected_notes
 
-
+		file_url=(supabase.storage.from_("community-files").get_public_url(path))
+		
 		with open(pdfpath,"rb") as f:
 			pdf1=f.read()
 			st.link_button(
     		"Open PDF",
-    		pdfpath
+    		file_url
 			)
 			
 		st.download_button(
