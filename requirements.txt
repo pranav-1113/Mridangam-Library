@@ -1,3 +1,4 @@
 streamlit 
 supabase
 httpx
+streamlit-pdf-viewer
