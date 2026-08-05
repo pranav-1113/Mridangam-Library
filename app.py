@@ -46,7 +46,7 @@ elif page == "Notes":
 			pdf1=f.read()
 			st.link_button(
     		"Open PDF",
-    		file_url
+    		pdfpath
 			)
 			
 		st.download_button(
