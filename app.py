@@ -20,7 +20,9 @@ video_dir=Path("data/videos")
 if page == "Home":                              
 	st.text("""Bridging the timeless tradition of Carnatic rhythm with modern digital learning. 
 Hello everyone, thank you for using my app! You can use this application to access notes, audio tracks, and video guides in one unified space. 
-Also, check out these interesting youtube channels: https://www.youtube.com/@pranavpercussion  AND  https://www.youtube.com/@letslearnmrudanga""")
+Also, check out these interesting youtube channels: 
+1. https://www.youtube.com/@pranavpercussion
+2. https://www.youtube.com/@letslearnmrudanga""")
 
 	st.subheader("About the Mridangam:")
 	st.text("""The mridangam is the premier percussion instrument of South Indian Carnatic music, revered as a Deva Vadyam (divine instrument) with a history spanning thousands of years. Its name is derived from the Sanskrit words mrit (clay) and ang (body), reflecting its ancient roots when the instrument's hollow barrel was crafted from baked earth, though modern mridangams are meticulously carved from a single block of jackwood. It features a dual-headed design layered with multiple skins, including a permanent black paste center on the right head that gives the instrument its signature metallic timbre and precise tonal tuning. As the heartbeat of a Carnatic ensemble, the mridangam is not merely an accompaniment; it holds the vital responsibility of keeping the thalam (rhythmic cycle), driving the pace, and engaging in complex, mathematical rhythmic dialogues (sollukattus) that elevate the spiritual and artistic essence of the music.""")
@@ -31,6 +33,8 @@ Also, check out these interesting youtube channels: https://www.youtube.com/@pra
 	st.subheader("About the founder:")
 	st.text("""The Mridangam Library was envisioned and built by Pranav Balakrishnan, a passionate student of music and mathematics who recognized a modern challenge in traditional learning. Recognizing how easily valuable hand-written notations, audio snippets, and practice videos can get scattered across notebook pages and chat threads, Pranav combined his technical skills with his deep appreciation for rhythmic artistry to build this centralized digital space. Guided by a love for Indian classical percussion and an eye for structured, analytical thinking, he engineered this platform to ensure that the rich heritage of the mridangam is preserved, organized, and easily accessible for a new generation of digital learners.""")
 
+	st.subheader("UPCOMING EVENTS:")
+	st.text("Sri Srinivasa Kalyana Utsavam 2026 - Sat Aug 15 2026- 8 AM CST onwards @ Radha Krishna Temple of Dallas (Allen)")
 elif page == "Notes":
 	st.subheader("Notes")
 	pdfs=list(notes_dir.glob("*.pdf"))
