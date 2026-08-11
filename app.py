@@ -17,7 +17,7 @@ notes_dir=Path("data/notes")
 audio_dir=Path("data/audio")
 video_dir=Path("data/videos")
 
-if page == "Home": 
+if page == "Home":                              
 	st.text("""Bridging the timeless tradition of Carnatic rhythm with modern digital learning. 
 Access notes, audio tracks, and video guides in one unified space.""")
 
@@ -129,7 +129,7 @@ elif page == "Community Uploads":
 		st.link_button("Open",item["file_url"])
 
 		if st.button(f"Delete {item['id']}"):
-			supabase.storage.from_("community-files").remove([item["storage_path"]])
+			supabase.storage.from_("community-files").remove([item.get("storage_path")]])
 			supabase.table("uploads").delete().eq("id",item["id"]).execute()
 			st.success("DELETED!")
 			st.rerun()
