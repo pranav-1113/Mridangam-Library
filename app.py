@@ -19,7 +19,8 @@ video_dir=Path("data/videos")
 
 if page == "Home":                              
 	st.text("""Bridging the timeless tradition of Carnatic rhythm with modern digital learning. 
-Access notes, audio tracks, and video guides in one unified space.""")
+Hello everyone, thank you for using my app! You can use this application to access notes, audio tracks, and video guides in one unified space. 
+Also, check out these interesting youtube channels: https://www.youtube.com/@pranavpercussion  AND  https://www.youtube.com/@letslearnmrudanga""")
 
 	st.subheader("About the Mridangam:")
 	st.text("""The mridangam is the premier percussion instrument of South Indian Carnatic music, revered as a Deva Vadyam (divine instrument) with a history spanning thousands of years. Its name is derived from the Sanskrit words mrit (clay) and ang (body), reflecting its ancient roots when the instrument's hollow barrel was crafted from baked earth, though modern mridangams are meticulously carved from a single block of jackwood. It features a dual-headed design layered with multiple skins, including a permanent black paste center on the right head that gives the instrument its signature metallic timbre and precise tonal tuning. As the heartbeat of a Carnatic ensemble, the mridangam is not merely an accompaniment; it holds the vital responsibility of keeping the thalam (rhythmic cycle), driving the pace, and engaging in complex, mathematical rhythmic dialogues (sollukattus) that elevate the spiritual and artistic essence of the music.""")
