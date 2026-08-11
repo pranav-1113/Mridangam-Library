@@ -129,7 +129,7 @@ elif page == "Community Uploads":
 		st.link_button("Open",item["file_url"])
 
 		if st.button(f"Delete {item['id']}"):
-			supabase.storage.from_("community-files").remove([item.get("storage_path")]])
+			supabase.storage.from_("community-files").remove([item.get("storage_path")])
 			supabase.table("uploads").delete().eq("id",item["id"]).execute()
 			st.success("DELETED!")
 			st.rerun()
